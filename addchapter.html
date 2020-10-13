@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./form.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./navbar.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <header>
+    <div id="nav-logo-and-links">
+      <h4>Instanovella</h4>
+      <div class="nav-top-links">
+        <a href="#">
+          <div class="nav-links" id="search-btn"></div>
+        </a>
+        <a href="#">
+          <div class="nav-links" id="user-btn"></div>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <a href="#">
+        <div class="nav-links" id="home-btn"></div>
+      </a>
+      <a href="#">
+        <div class="nav-links" id="books-btn"></div>
+      </a>
+      <a href="#">
+        <div class="nav-links" id="bell-btn"></div>
+      </a>
+      <a href="#">
+        <div class="nav-links" id="menu-btn"></div>
+      </a>
+    </nav>
+  </header>
+ <main style="max-height: 110vh; overflow: hidden">
+    
+    <section class="intro">
+  <h1>Add a chapter</h1>
+    <form action="" method="get" accept-charset="utf-8">
+     <label for="title">Title</label>
+          <input type="text" name="title" id="title">
+          
+          <label for="story">Story</label>
+          
+          <textarea class="input" name="story" id="story" rows="20" cols="40"></textarea>
+          <input type="submit" name="publish" class="form-btn" value="Publish" />
+    </form>
+    </section>
+    </main>
+</body>
+
+</html>
