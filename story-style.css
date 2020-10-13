@@ -1,0 +1,176 @@
+main::before {
+				z-index:-1;
+				}
+
+#bookpage {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding: 0 10px;
+}
+
+
+#backdrop {
+    width: 100vw;
+    height: 140px;
+    background: url("./book_cover.jpg");
+    background-position-y: center;
+    margin: 0 -10px;
+    margin-bottom: -80px;
+    filter: blur(2.8px);
+}
+
+#intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    index: 2;
+}
+
+ #intro img {
+    width: 100px;
+    background-size: cover;
+    
+    z-index: 1;
+ }
+
+ #story-analytics-sub{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px auto;
+    width: 80%;
+ }
+
+
+ 
+ #book-author {
+    margin: 0;
+    margin: 20px;
+    align-items: center;
+
+}
+
+#book-author img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+#ranking {
+    margin-top: 10px;
+    display: flex;
+    
+}
+
+#ranking img{
+    width: 15px;
+    height: 20px;
+}
+
+
+ .center {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     
+ }
+/* Where the reads and stuff are */
+
+ #read-story-btns {
+     height: 30px;
+     margin: 30px 0;
+ }
+
+ #read-story-btns .btn {
+    
+    padding: 10px;
+    margin: 5px;
+}
+
+#read-story-btns .btn:first-child {
+    width: 45%;
+}
+
+#story-desc {
+    position: relative;
+    padding: 10px 5px;
+    
+}
+/* To make the horizontal line  */
+#story-desc::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 100vw;
+    height: 1px;
+    background-color: grey;
+}
+
+#tags {
+    position: relative;
+    padding-top: 20px;
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+  }
+  
+  
+  
+  #tags .tag {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px;
+    scroll-snap-align: start;
+    max-width: 170px;
+    background: var(--grey);
+    border-radius: 70px;
+    font-size: 10px;
+  }
+
+#chapters-list {
+    margin-bottom: 40px;
+}
+
+#chapters-top {
+    display: flex;
+    height: 40px;
+    
+    justify-content: space-between;
+
+}
+
+#chapters-top * {
+    margin: 0;
+}
+
+#chapters-top button {
+    background: none;
+    width: 20px;
+}
+
+#chapters-bottom {
+    overflow: hidden;
+    padding-left: 5px;
+    transition: 1s;
+}
+
+.chapters-close {
+    height: 0;
+}
+
+#open-content {
+    transform-origin: center;
+    transition: all 1s;
+    transform: rotateX(0deg);
+}
+
+#open-content:hover {
+    animation: none;
+    transform: rotateX(180deg);
+
+}

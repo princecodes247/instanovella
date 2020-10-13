@@ -1,0 +1,399 @@
+@font-face {
+  font-family: Nunito;
+  src: url(./fonts/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0 ;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #FAFAFA;
+  --grey: #EDEDF4;
+  --grey2: rgba(172, 172, 204, 1);
+  --thick-red: #DE3926;
+  --light-red: #DB5461;
+  --pale-blue: hsl(243, 100%, 93%)
+  --grayish-blue: hsl(229, 7%, 55%)
+  --dark-blue: hsl(228, 56%, 26%)
+  --very-dark-blue: hsl(229, 57%, 11%)
+  --dark-bue: #2364AA;
+  --lght-ble: #3DA5D9;
+  --light-blue: #00AFF0;
+  --gold-yellow: #FEC601;
+  --amber: #FFD54F;
+  --orange: #FFAB42;
+  --gold: #E8D13C;
+  --main-font: Nunito, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --alt-font: Poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --grad1: linear-gradient(99deg, rgba(255, 166, 0, 1) 14.7%, rgba(255, 99, 97, 1) 73%);
+}
+
+.light {
+  --bg: var(--white)
+}
+
+
+
+body {
+  font-family: var(--main-font);
+    font-size: 15pt;
+}
+
+h2 {
+  margin: 20px 0;
+  
+}
+
+h3 {
+  font-size: 0.6em;
+  margin-top: -20px;
+  text-align: right;
+}
+
+
+h4 {
+  font-family: var(--alt-font);
+  font-size: 0.93em;
+  font-weight: 500;
+}
+h5 {
+  font-family: var(--alt-font);
+  font-size: 0.65em;
+  font-weight: 400;
+}
+p{
+  font-family: var(--alt-font);
+  font-size: 0.67em;
+  font-weight: 400;
+}
+img {
+  background: url("./story-ph.png");
+
+}
+
+/* ------ Navbar stuff are in navbar.css ----*/
+
+
+#menu {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  transition-delay: 0s;
+  z-index: 5;
+}
+
+#menu li {
+  list-style: none;
+}
+
+#menu li a {
+  font-size: 1.4em;
+  text-decoration: none;
+  color: var(--main-text-color);
+  line-height: 50px;
+}
+
+main {
+  position: relative;
+  
+  /*So the elements in index.html have infinite space */
+  min-height: 500px;
+  max-width: 100vw;
+  background: var(--bg);
+  margin: 0px;
+  padding: 0 30px;
+  padding-bottom: 50px;
+}
+
+
+section.cover {
+  overflow: hidden;
+}
+/* The Menu Background */
+main::before, main::after {
+  pointer-events: none;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  background: var(--grey);
+  top: 100px;
+  left: 0;
+  width: 170px;
+  height: 50vh;
+  transition: 0.5s;
+  opacity: 0.9;
+  /*box-shadow: 0 0 20px 2px var(--grey);*/
+  z-index: 0;
+}
+
+main::after {
+  content: '';
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: 80px;
+  height: 120px;
+  background: var(--grey2);
+  transition: 0.5s;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Stuff for the menu animation */
+main.active::before {
+  position: fixed;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 4;
+  background: var(--bg);
+  opacity: 1;
+}
+
+main.active::after {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 51vw;
+  height: 100vh;
+  z-index: 4;
+  background: var(--bg);
+  opacity: 1;
+  
+}
+
+main * {
+  transform-origin: left;
+  transition-duration: 0.5s;
+}
+main.active {
+ min-height: 81vh;
+ overflow: hidden
+}
+main.active+#menu{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+main.active .sect{
+  transform: scale(0);
+}
+main.active~footer {
+}
+
+#menu-btn {
+  transition: 0.4s all;
+  transition-delay: 0s;
+}
+#menu-btn.active {
+  position: fixed;
+  top: 9.5vh;
+  right: 7vw;
+  z-index: 10;
+  transition: 0.9s all;
+  transition-delay: 0.2s;
+  transform: translateY(-100%)
+}
+header.active {
+  position: static;
+}
+
+
+
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.intro .top {
+  height: 70%;
+  width: 65%;
+  min-width: 150px;
+  max-width: 300px;
+  margin-bottom: 20px;
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro .card {
+  margin-top: 80px;
+  width: 100%;
+display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.intro .top img {
+  width: 130px;
+  min-height: 180px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.intro .bottom {
+  margin: 0 auto;
+  padding: 0 10%;
+  width: 100%;
+}
+
+.desc {
+  font-size: 0.77em;
+  line-height: 1.2em;
+}
+
+
+.sect {
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+
+.sect::before {
+  content: attr(data-sect-name);
+  position: absolute;
+  top: 0;
+  left: 13px;
+  font-family: var(--alt-font);
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.stories {
+  position: relative;
+  padding-top: 20px;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+
+
+.stories .story {
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  scroll-snap-align: start;
+  max-width: 170px;
+}
+
+.story .card {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  transition: 2s
+}
+
+.story .card img {
+  
+  min-width: 100px;
+  min-height: 160px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.title {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.title h4 {
+  width: 100%;
+  text-align: center;
+}
+
+/* For story.html */
+
+#bintro #book {
+  width: 100%;
+  padding: 0;
+}
+
+#bintro {
+  padding: 0;
+}
+#bintro #book .top {
+  width: 100%;
+  justify-content: space-between;
+}
+
+#bintro #book .top img {
+  height: 230px;
+  width: 180px;
+  justify-content: space-between;
+}
+
+#bintro #book  .bottom {
+  padding-left: 0;
+}
+
+#bintro #book .top .title {
+  width: 50%;
+  text-align: left;
+  text-align: left;
+  align-items: flex-start;
+}
+
+
+/* END*/
+
+
+footer {
+  height: 11vh;
+  min-height: 70px;
+  background: var(--grey);
+  width: 100%;
+  z-index: 99;
+  
+}
+#foot-links {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* For Tablets 700px width */
+
+@media screen and (min-width: 740px) {
+
+
+}

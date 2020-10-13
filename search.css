@@ -1,0 +1,70 @@
+#search-form {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+#search {
+  align-self: center;
+  margin: 0;
+  max-width: 100%;
+  padding-right: 20%;
+}
+
+#search-form-btn {
+  right: 0;
+  width: 20%;
+  position: absolute;
+  align-self: center;
+  margin: 0;
+  background: url("./assets/search-thin.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#results {
+  height: 10vh;
+}
+
+main::before {
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.cat-item {
+  height: 40px;
+  width: 100%;
+  background: var(--grey);
+  opacity: 0.9;
+  margin-bottom: 5px;
+  padding: 8px 10px;
+}
+
+#search-options {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-right: 4%;
+  text-align: right;
+}
+
+#stories-label, #people-label {
+  width: 50%;
+  background: var(--grey);
+  transition: 0s;
+  padding: 2px 10px;
+  font-size: 15px;
+}
+
+#stories, #people {
+  opacity: 0;
+  display: none;
+}
+
+#stories:checked+#stories-label,
+#people:checked+#people-label {
+  transition: 0.6s all;
+  background: var(--grey2)
+}

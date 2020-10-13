@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./form.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./button.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+  <header>
+    <div id="nav-logo-and-links">
+      <h4>Instanovella</h4>
+      <div class="nav-top-links">
+        <a href="#">
+          <div class="nav-links" id="search-btn"></div>
+        </a>
+        <a href="#">
+          <div class="nav-links" id="user-btn"></div>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <a href="#">
+        <div class="nav-links" id="home-btn"></div>
+      </a>
+      <a href="#">
+        <div class="nav-links" id="books-btn"></div>
+      </a>
+      <a href="#">
+        <div class="nav-links" id="bell-btn"></div>
+      </a>
+      <a href="#">
+        <div class="nav-links" id="menu-btn"></div>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section class="intro" style="margin-top: 8vh">
+  
+  <h1>Create</h1>
+  <form id="create-form" action="" method="get" accept-charset="utf-8">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" required>
+    
+    <label for="desc">Description</label>
+    <input type="text" name="desc" id="desc" required>
+    
+    
+    <label for="category">Category</label>
+    <input type="text" name="category" id="category" required>
+    <!--  <label for="bcover">Book Cover</label>
+<label class="file">
+        <input type="file" id="file" aria-label="File browser example">
+        <span class="file-custom"></span>
+      </label>-->
+    <input class="btn form-btn" type="submit" name="create" id="create" value="Create" accept="image/*" />
+  </form>
+      
+    </section>
+  </main>
+  <script src="./createbook.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

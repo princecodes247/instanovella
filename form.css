@@ -1,0 +1,84 @@
+form {
+  height: 50%;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+form input {
+  flex: 25;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  min-height: 40px;
+  border: none;
+  outline: none;
+  background: rgba(172, 172, 204, 0.3);
+  opacity: 1;
+  padding-left: 5px; 
+}
+
+form input:hover {
+
+  background: rgba(172, 172, 204, 0.7);
+  opacity: 1;
+}
+
+
+form .input {
+  flex: 25;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  min-height: 40px;
+  border: none;
+  outline: none;
+  background: rgba(172, 172, 204, 0.3);
+  opacity: 1;
+}
+
+form .input:hover {
+
+  background: rgba(172, 172, 204, 0.7);
+  opacity: 1;
+}
+
+
+form label {
+  flex: 15;
+  font-size: 0.8em;
+}
+
+form textarea{
+  width: 100%;
+  height: 60px;
+  resize: none;
+}
+
+.form-btn {
+  margin-top: 20px;
+  width: 40%;
+  align-self: center;
+  max-width: 200px;
+  min-width: 50px;
+}
+
+#form-holder {
+  margin-top: 40px;
+  padding-top: 60px;
+  width: 100vw; 
+  height: 60vh; 
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+#form-holder form {
+  height: 100%;
+}
+
+#publish {
+  width: 50%;
+  
+}
