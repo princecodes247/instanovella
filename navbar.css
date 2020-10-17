@@ -5,6 +5,7 @@ header {
   height: 16vh;
   min-height: 50px;
   width: 100vw;
+  
   background: var(--light-blue);
 display: flex;
 flex-direction: column;
@@ -14,8 +15,12 @@ justify-content: space-around;
     padding: 0 0px 0 0px;
     padding-left: 0;
     z-index: 4;
-    max-width: 100vw;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
+    /* Fixes the issue of page scrolling horizontally */
+    overflow-x: hidden;
+    max-width: 100%;
+    
 }
 
 #nav-logo-and-links {
@@ -48,8 +53,9 @@ display: flex;
 }
 
 .nav-links {
-  height: 30px;
-  width: 30px;
+  height: 1.2em;
+  width: 1.2em;
+  
   position: relative;
   
 }
@@ -64,7 +70,7 @@ display: flex;
   background: url('assets/search-thin.svg');
   background-repeat: no-repeat;
   background-position: center;
-  
+  background-size: 100%;
 }
 
 #user-btn {
@@ -78,22 +84,26 @@ display: flex;
   background: url('assets/home-thin.svg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
 }
 
 #books-btn {
   background: url('assets/school-26.svg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
 }
 
 #bell-btn {
   background: url('assets/bell-thin.svg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
 }
 
 #menu-btn {
   background: url('assets/menu-thin.svg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
 }

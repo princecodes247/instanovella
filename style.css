@@ -40,11 +40,26 @@
   --bg: var(--white)
 }
 
+/* REMOVE AFTER SETTING THE THEMER */
+a:link {
+  color: black;
+}
+a:visited {
+  color: grey;
+}
+a:hover {
+  color: lightblue;
+}
+a:active {
+  color: var(--light-blue);
+}
+
 
 
 body {
   font-family: var(--main-font);
     font-size: 15pt;
+
 }
 
 h2 {
@@ -120,6 +135,8 @@ main {
   margin: 0px;
   padding: 0 30px;
   padding-bottom: 50px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -206,13 +223,16 @@ main.active~footer {
   transition-delay: 0s;
 }
 #menu-btn.active {
-  position: fixed;
-  top: 9.5vh;
-  right: 7vw;
+  position: relative;
+  top: 0;
+  right: 0;
   z-index: 10;
   transition: 0.9s all;
   transition-delay: 0.2s;
   transform: translateY(-100%)
+}
+#menu-btn.active~.nav-links {
+  opacity: 0.1;
 }
 header.active {
   position: static;
@@ -266,6 +286,7 @@ display: flex;
 .desc {
   font-size: 0.77em;
   line-height: 1.2em;
+  text-overflow: ellipsis;
 }
 
 
@@ -376,8 +397,10 @@ footer {
   height: 11vh;
   min-height: 70px;
   background: var(--grey);
-  width: 100%;
+  width: 100vw;
   z-index: 99;
+  max-width: 100%;
+  overflow: hidden;
   
 }
 #foot-links {

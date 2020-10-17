@@ -1,0 +1,129 @@
+#user-settings {
+  height: 7vh;
+  background-color: yellow;
+}
+
+#user-details {
+}
+
+.user-pic {
+  border: thin solid green;
+  border-radius: 50%;
+  padding: 0;
+  width: 4em;
+  height: 4em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+.user-info {
+  background-color: violet;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 45vh;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.user-info h3 {
+  text-align: center;
+  display: inline;
+}
+
+.btn {
+  margin-bottom: 10px;
+  padding: 10px 50px;
+  text-align: center;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: tomato;
+  width: 100%;
+  justify-content: space-around;
+  /* padding-left: 5%; */
+}
+
+.user-stats span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 30%;
+  border: thin solid goldenrod;
+}
+
+.user-stats span * {
+  border: 1px solid aquamarine;
+  text-align: center;
+}
+#about-sect nav {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  background: turquoise;
+  text-align: center;
+}
+
+#about-sect nav div {
+  border: 1px solid blue;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-sect .desc {
+  background-color: gray;
+  height: 52px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+#about-sect .user-pic {
+  width: 2em;
+  height: 2em;
+}
+
+#messages-cont {
+  text-align: center;
+}
+
+.send-message-cont {
+  display: flex;
+  width: 100%;
+  padding: 5px 5%;
+}
+
+.message-header {
+  display: flex;
+}
+.message-header .message-header-details h3 {
+  margin: 0;
+}
+
+.message .message-text {
+  flex: 25;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  min-height: 40px;
+  border: none;
+  outline: none;
+  background: rgba(172, 172, 204, 0.83);
+  opacity: 1;
+  padding-left: 5px;
+}

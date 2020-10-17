@@ -1,176 +1,244 @@
-main::before {
-				z-index:-1;
-				}
-
-#bookpage {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    padding: 0 10px;
+/* REMOVE AFTER SETTING THE THEMER */
+a:link {
+  color: black;
+}
+a:visited {
+  color: grey;
+}
+a:hover {
+  color: lightblue;
+}
+a:active {
+  color: var(--light-blue);
 }
 
+main::before {
+  z-index: -1;
+}
+
+#bookpage {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding: 0 10px;
+}
 
 #backdrop {
-    width: 100vw;
-    height: 140px;
-    background: url("./book_cover.jpg");
-    background-position-y: center;
-    margin: 0 -10px;
-    margin-bottom: -80px;
-    filter: blur(2.8px);
+  width: 100vw;
+  height: 140px;
+  background: url("./book_cover.jpg");
+  background-position-y: center;
+  margin: 0 -10px;
+  margin-bottom: -80px;
+  filter: blur(2.8px);
 }
 
 #intro {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
 }
 
- #intro img {
-    width: 100px;
-    background-size: cover;
-    
-    z-index: 1;
- }
+#intro img {
+  width: 100px;
+  background-size: cover;
 
- #story-analytics-sub{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 5px auto;
-    width: 80%;
- }
+  z-index: 1;
+}
 
+#story-analytics-sub {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px auto;
+  width: 80%;
+}
 
- 
- #book-author {
-    margin: 0;
-    margin: 20px;
-    align-items: center;
-
+#book-author {
+  margin: 0;
+  margin: 20px;
+  align-items: center;
 }
 
 #book-author img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 50%;
 }
 
 #ranking {
-    margin-top: 10px;
-    display: flex;
-    
+  margin-top: 10px;
+  display: flex;
 }
 
-#ranking img{
-    width: 15px;
-    height: 20px;
+#ranking img {
+  width: 15px;
+  height: 20px;
 }
 
-
- .center {
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     
- }
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 /* Where the reads and stuff are */
 
- #read-story-btns {
-     height: 30px;
-     margin: 30px 0;
- }
+#read-story-btns {
+  height: 30px;
+  margin: 30px 0;
+}
 
- #read-story-btns .btn {
-    
-    padding: 10px;
-    margin: 5px;
+#read-story-btns .btn {
+  padding: 10px;
+  margin: 5px;
 }
 
 #read-story-btns .btn:first-child {
-    width: 45%;
+  width: 45%;
 }
 
 #story-desc {
-    position: relative;
-    padding: 10px 5px;
-    
+  position: relative;
+  padding: 10px 5px;
+  text-overflow: ellipsis;
 }
 /* To make the horizontal line  */
 #story-desc::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10px;
-    width: 100vw;
-    height: 1px;
-    background-color: grey;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 100vw;
+  height: 1px;
+  background-color: grey;
 }
 
 #tags {
-    position: relative;
-    padding-top: 20px;
-    overflow: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    scroll-snap-type: x mandatory;
-  }
-  
-  
-  
-  #tags .tag {
-    display: inline-block;
-    text-align: center;
-    padding: 5px 10px;
-    scroll-snap-align: start;
-    max-width: 170px;
-    background: var(--grey);
-    border-radius: 70px;
-    font-size: 10px;
-  }
+  position: relative;
+  padding-top: 20px;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+#tags .tag {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
+  scroll-snap-align: start;
+  max-width: 170px;
+  background: var(--grey);
+  border-radius: 70px;
+  font-size: 10px;
+}
 
 #chapters-list {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 #chapters-top {
-    display: flex;
-    height: 40px;
-    
-    justify-content: space-between;
+  display: flex;
+  height: 40px;
 
+  justify-content: space-between;
 }
 
 #chapters-top * {
-    margin: 0;
+  margin: 0;
 }
 
 #chapters-top button {
-    background: none;
-    width: 20px;
+  background: none;
+  width: 20px;
 }
 
 #chapters-bottom {
-    overflow: hidden;
-    padding-left: 5px;
-    transition: 1s;
+  overflow: hidden;
+  padding-left: 5px;
+  transition: 1s;
+}
+#chapters-bottom li a * {
+  transition-duration: 0.4s;
+}
+
+#chapters-bottom li {
+  display: flex;
+  background: var(--grey);
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+#chapters-bottom li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
 }
 
 .chapters-close {
-    height: 0;
+  height: 0;
 }
 
 #open-content {
-    transform-origin: center;
-    transition: all 1s;
-    transform: rotateX(0deg);
+  transform-origin: center;
+  transition: all 1s;
+  transform: rotateX(0deg);
 }
 
 #open-content:hover {
-    animation: none;
-    transform: rotateX(180deg);
+  animation: none;
+  transform: rotateX(180deg);
+}
 
+#comments {
+  border: 1px solid lightcoral;
+
+  padding: 5px;
+  text-align: center;
+}
+
+#all-comments {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid green;
+  text-align: left;
+  padding: 5px;
+  max-height: 280px;
+  height: 200px;
+  font-size: small;
+  overflow-y: scroll;
+}
+
+.comment {
+  background: grey;
+  margin: 5px 5px;
+
+  display: flex;
+  min-height: 65px;
+  align-items: flex-start;
+}
+
+.comment p {
+  background: var(--grey);
+  margin-left: 15px;
+  min-height: 50px;
+  padding: 10px;
+}
+
+.comment span {
+  height: 3.5em;
+  border: 1px solid red;
+  width: 3.5em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.comment span img {
+  width: 100%;
 }
