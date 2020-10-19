@@ -1,13 +1,10 @@
 #user-settings {
   height: 7vh;
-  background-color: yellow;
-}
-
-#user-details {
 }
 
 .user-pic {
-  border: thin solid green;
+  overflow: hidden;
+  border: 2px solid rgba(172, 172, 204, 0.3);
   border-radius: 50%;
   padding: 0;
   width: 4em;
@@ -17,17 +14,17 @@
 img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   margin: 0;
   padding: 0;
 }
 .user-info {
-  background-color: violet;
+  background-color: rgb(230, 230, 230);
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  height: 45vh;
+  height: 50vh;
   text-align: center;
   justify-content: space-between;
 }
@@ -37,18 +34,13 @@ img {
   display: inline;
 }
 
-.btn {
-  margin-bottom: 10px;
-  padding: 10px 50px;
-  text-align: center;
-}
-
 .user-stats {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: tomato;
+
+  /* background-color: rgba(190, 190, 190, 0.3); */
   width: 100%;
   justify-content: space-around;
   /* padding-left: 5%; */
@@ -61,23 +53,28 @@ img {
   justify-content: center;
   margin: 0;
   width: 30%;
-  border: thin solid goldenrod;
 }
 
 .user-stats span * {
-  border: 1px solid aquamarine;
   text-align: center;
 }
+
+.btn {
+  margin: 20px;
+  padding: 10px 50px;
+  text-align: center;
+}
+
 #about-sect nav {
   width: 100%;
   height: 20px;
   display: flex;
-  background: turquoise;
   text-align: center;
 }
 
 #about-sect nav div {
-  border: 1px solid blue;
+  border-right: 2px solid rgba(170, 170, 170, 0.3);
+  border-bottom: 2px solid rgba(170, 170, 170, 0.3);
   height: 100%;
   width: 50%;
   display: flex;
@@ -86,14 +83,29 @@ img {
 }
 
 #about-sect .desc {
-  background-color: gray;
-  height: 52px;
+  max-height: 300px;
+  margin-top: 20px;
+
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  font-size: 1em;
+  line-height: 0.8em;
+  padding: 0 10px;
+  transition: max-height 2s ease-out;
 }
 
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-sect .desc.close {
+  max-height: calc(0.8em * 4);
+}
+
+/* For the message feed */
 #about-sect .user-pic {
   width: 2em;
   height: 2em;
@@ -105,25 +117,136 @@ img {
 
 .send-message-cont {
   display: flex;
+  flex-direction: row;
   width: 100%;
-  padding: 5px 5%;
+  padding: 5px 6%;
+}
+
+#messages-cont .send-message-cont .user-pic {
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 10px;
+}
+
+#messages-cont .send-message-cont textarea {
+  padding: 5px 10px;
+  background: rgb(230, 230, 230);
+}
+
+#messages-cont .send-message-cont textarea:focus {
+  background: rgb(192, 192, 192);
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6%;
+}
+
+.message {
+  padding: 0 10px 10px;
+  margin: 20px 0;
+  background: rgb(230, 230, 230);
+  text-align: left;
+  max-height: fit-content;
 }
 
 .message-header {
   display: flex;
+  align-items: center;
+  /* border-bottom: 1px solid rgba(172, 172, 204, 0.83); */
+  height: 3em;
 }
+
+.message-header .message-header-details {
+  margin-left: 10px;
+}
+
 .message-header .message-header-details h3 {
   margin: 0;
 }
 
 .message .message-text {
   flex: 25;
-  font-size: 0.8em;
-  margin-bottom: 10px;
+  font-size: 1em;
+  text-transform: capitalize;
+  margin-top: 10px;
   min-height: 40px;
   border: none;
   outline: none;
-  background: rgba(172, 172, 204, 0.83);
   opacity: 1;
+  padding-top: 5px;
   padding-left: 5px;
+}
+
+.message-text {
+  overflow: hidden;
+}
+
+.message-text.close {
+  position: relative;
+  max-height: calc(1em * 10);
+}
+
+.message-text.close::after {
+  content: "See More...";
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  font-size: 0.77em;
+  font-weight: 400;
+  padding-left: 100px;
+  background: linear-gradient(
+    to right,
+    rgba(230, 230, 230, 0.2) 5%,
+    rgb(230, 230, 230) 60%
+  );
+}
+
+.reply {
+  margin-top: 20px;
+  padding-left: 4px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.reply .reply-text {
+  margin: auto;
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  padding-left: 10px;
+}
+
+.reply .reply-text p {
+  margin: 0;
+  padding-right: 10px;
+}
+
+.reply .reply-text .top {
+  margin: 0;
+  margin-right: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reply .reply-text .top .reply-name h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.reply .reply-text .top {
+  display: flex;
+}
+
+.none {
+  display: none;
+}
+
+.reply .reply-text .reply-details {
+  display: flex;
+  font-size: 0.8em;
 }

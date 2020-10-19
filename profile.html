@@ -40,9 +40,12 @@
       </nav>
     </header>
     <section class="user-info">
-      <nav id="user-settings">settings</nav>
+      <nav id="user-settings">
+        <p>settings</p>
+        <div class="menu-btn">M</div>
+      </nav>
       <div id="user-details">
-        <div class="user-pic">
+        <div style="overflow: hidden" class="user-pic">
           <img src="./user_icon.png" alt="1" />
         </div>
 
@@ -71,15 +74,18 @@
         <div><p>Messages</p></div>
       </nav>
       <article id="about">
-        <p class="desc">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-          tempore quasi nisi nulla odit distinctio obcaecati qui provident quo
-          eaque iste, iusto placeat odio a voluptatibus nihil maxime hic
-          consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Rem nam adipisci facere cumque unde ratione! Consectetur ad recusandae
-          cupiditate, facere voluptates perferendis assumenda asperiores
-          quisquam, nemo quam maiores, odit aspernatur.
-        </p>
+        <div class="desc close">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+            tempore quasi nisi nulla odit distinctio obcaecati qui provident quo
+            eaque iste, iusto placeat odio a voluptatibus nihil maxime hic
+            consequatur! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Rem nam adipisci facere cumque unde ratione! Consectetur ad
+            recusandae cupiditate, facere voluptates perferendis assumenda
+            asperiores quisquam, nemo quam maiores, odit aspernatur.
+          </p>
+        </div>
+
         <input class="btn" type="button" value="Show More" />
       </article>
       <article id="messages-cont">
@@ -93,7 +99,7 @@
             name="send-message"
             class="input"
             id="send-message"
-            cols="30"
+            cols="10"
             rows="5"
           >
 Send a message</textarea
@@ -111,48 +117,111 @@ Send a message</textarea
               </div>
             </div>
 
-            <p class="message-text">lol</p>
+            <div class="message-text">
+              <p>lol</p>
+            </div>
+          </span>
+
+          <span class="message">
+            <div class="message-header">
+              <div class="user-pic">
+                <img src="./user_icon.png" alt="1" />
+              </div>
+              <div class="message-header-details">
+                <h3>Prince Dart</h3>
+                <h5>a day ago</h5>
+              </div>
+            </div>
+
+            <div class="message-text">
+              <p>lol</p>
+            </div>
+          </span>
+          <span class="message">
+            <div class="message-header">
+              <div class="user-pic">
+                <img src="./user_icon.png" alt="1" />
+              </div>
+              <div class="message-header-details">
+                <h3>Prince Dart</h3>
+                <h5>a day ago</h5>
+              </div>
+              <div class="message-options">M</div>
+            </div>
+
+            <div class="message-text close">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+                tempore quasi nisi nulla odit distinctio obcaecati qui provident
+                quo eaque iste, iusto placeat odio a voluptatibus nihil maxime
+                hic consequatur! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Rem nam adipisci facere cumque unde ratione!
+                Consectetur ad recusandae cupiditate, facere voluptates
+                perferendis assumenda asperiores quisquam, nemo quam maiores,
+                odit aspernatur.
+              </p>
+            </div>
+            <div class="replies">
+              <div class="reply">
+                <div class="reply-header">
+                  <div class="user-pic">
+                    <img src="./user_icon.png" alt="1" />
+                  </div>
+                </div>
+                <div class="reply-text">
+                  <div class="top">
+                    <div class="reply-name">
+                      <h3>Prince Dart</h3>
+                    </div>
+                    <div class="message-options">M</div>
+                  </div>
+                  <p>
+                    loLorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Libero tempore quasi nisi nulla odit distinctio obcaecati
+                    qui provident quo eaque iste, iusto placeat odio a
+                    voluptatibus nihil maxime hic consequatur! Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Rem l
+                  </p>
+                  <span class="reply-details">
+                    <h5>a day ago |</h5>
+                    <h5><a href="#">reply</a></h5>
+                  </span>
+                </div>
+              </div>
+              <div class="reply"></div>
+              <div class="reply"></div>
+            </div>
+            <form class="send-message-cont none">
+              <div class="user-pic">
+                <img src="./user_icon.png" alt="1" />
+              </div>
+              <textarea
+                name="send-message"
+                class="input"
+                id="send-message"
+                cols="10"
+                rows="5"
+              >
+    Send a message</textarea
+              >
+            </form>
+          </span>
+          <span class="message">
+            <div class="message-header">
+              <div class="user-pic">
+                <img src="./user_icon.png" alt="1" />
+              </div>
+              <div class="message-header-details">
+                <h3>Prince Dart</h3>
+                <h5>a day ago</h5>
+              </div>
+            </div>
+
+            <div class="message-text">
+              <p>lol</p>
+            </div>
           </span>
         </div>
-        <span class="message">
-          <div class="message-header">
-            <div class="user-pic">
-              <img src="./user_icon.png" alt="1" />
-            </div>
-            <div class="message-header-details">
-              <h3>Prince Dart</h3>
-              <h5>a day ago</h5>
-            </div>
-          </div>
-
-          <p class="message-text">lol</p>
-        </span>
-        <span class="message">
-          <div class="message-header">
-            <div class="user-pic">
-              <img src="./user_icon.png" alt="1" />
-            </div>
-            <div class="message-header-details">
-              <h3>Prince Dart</h3>
-              <h5>a day ago</h5>
-            </div>
-          </div>
-
-          <p class="message-text">lol</p>
-        </span>
-        <span class="message">
-          <div class="message-header">
-            <div class="user-pic">
-              <img src="./user_icon.png" alt="1" />
-            </div>
-            <div class="message-header-details">
-              <h3>Prince Dart</h3>
-              <h5>a day ago</h5>
-            </div>
-          </div>
-
-          <p class="message-text">lol</p>
-        </span>
       </article>
     </section>
     <section id="reading-list">reading Lists</section>
