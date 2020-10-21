@@ -15,15 +15,13 @@ form input {
   outline: none;
   background: rgba(172, 172, 204, 0.3);
   opacity: 1;
-  padding-left: 5px; 
+  padding-left: 5px;
 }
 
 form input:hover {
-
   background: rgba(172, 172, 204, 0.7);
   opacity: 1;
 }
-
 
 form .input {
   flex: 25;
@@ -37,18 +35,16 @@ form .input {
 }
 
 form .input:hover {
-
   background: rgba(172, 172, 204, 0.7);
   opacity: 1;
 }
-
 
 form label {
   flex: 15;
   font-size: 0.8em;
 }
 
-form textarea{
+form textarea {
   width: 100%;
   height: 60px;
   resize: none;
@@ -65,12 +61,12 @@ form textarea{
 #form-holder {
   margin-top: 40px;
   padding-top: 60px;
-  width: 100vw; 
-  height: 60vh; 
+  width: 100vw;
+  height: 60vh;
   min-height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
@@ -80,5 +76,9 @@ form textarea{
 
 #publish {
   width: 50%;
-  
+}
+
+textarea {
+  font-family: Montserrat;
+  font-size: 22em;
 }

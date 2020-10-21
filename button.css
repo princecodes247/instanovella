@@ -2,11 +2,20 @@
   outline: none;
   -webkit-tap-highlight-color: transparent;
   border: none;
-  border-radius: 20px;
-  background: rgba(172, 172, 204, 0.3);
+  padding: 7px;
+  border-radius: 5px;
+  background: var(--theme-color);
+  color: var(--color);
+  color: black;
+  font-family: var(--main-font);
+  font-weight: 00;
   align-self: center;
   max-width: 200px;
   min-width: 50px;
+}
+
+.btn.alt-btn {
+  background: var(--alt-theme-color);
 }
 
 .btn:hover {

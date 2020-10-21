@@ -8,36 +8,71 @@
   src: url(./fonts/Poppins-Regular.ttf);
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
-  padding: 0 ;
+  padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --white: #FAFAFA;
-  --grey: #EDEDF4;
+  --white: #fff;
+  --grey: #ededf4;
   --grey2: rgba(172, 172, 204, 1);
-  --thick-red: #DE3926;
-  --light-red: #DB5461;
-  --pale-blue: hsl(243, 100%, 93%)
-  --grayish-blue: hsl(229, 7%, 55%)
-  --dark-blue: hsl(228, 56%, 26%)
-  --very-dark-blue: hsl(229, 57%, 11%)
-  --dark-bue: #2364AA;
-  --lght-ble: #3DA5D9;
-  --light-blue: #00AFF0;
-  --gold-yellow: #FEC601;
-  --amber: #FFD54F;
-  --orange: #FFAB42;
-  --gold: #E8D13C;
-  --main-font: Nunito, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  --alt-font: Poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  --grad1: linear-gradient(99deg, rgba(255, 166, 0, 1) 14.7%, rgba(255, 99, 97, 1) 73%);
+  --grey3: rgba(200, 200, 200, 0.3);
+  --thick-red: #de3926;
+  --light-red: #db5461;
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --ds-blue: hsl(228, 28%, 20%);
+  --dark-blue: hsl(232, 19%, 16%);
+  --very-dark-blue: hsl(230, 17%, 14%);
+  --dark-bue: #2364aa;
+  --lght-ble: #3da5d9;
+  --light-blue: #00aff0;
+  --red: #F20707;
+  --thick-red: #BF3636;
+  --gold-yellow: #fec601;
+  --amber: #ffd54f;
+  --thick-yellow:  #F2C849;
+  --light-yellow: #F2D43D;
+  --orange: #ffab42;
+  --gold: #e8d13c;
+  --main-font: Nunito, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --alt-font: Poppins, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --grad1: linear-gradient(
+    99deg,
+    rgba(255, 166, 0, 1) 14.7%,
+    rgba(255, 99, 97, 1) 73%
+  );
+  --grad2: linear-gradient(135deg, #3c8ce7 10%, #00eaff 100%);
+  --grad3: linear-gradient( 135deg, #F5CBFF 10%, #C346C2 100%);
+  --grad4: linear-gradient( 135deg, #FEC163 10%, #DE4313 100%);*/
+
 }
 
 .light {
-  --bg: var(--white)
+  --bg: var(--very-dark-blue);
+  --nav-color: var(--dark-blue);
+  --color: var(--white);
+  --sub-color: var(--ds-blue);
+  --p-color: var(--light-blue);
+  --theme-color: var(--gold-yellow);
+  --alt-theme-color: var(--ds-blue);
+}
+hhh{
+  --bg: var(--white);
+  --nav-color: var(--grad2);
+  --p-color: var(--light-blue);
+  --theme-color: var(--gold-yellow);
+  --alt-theme-color: var(--grey3);
+}
+
+.dark {
+
 }
 
 /* REMOVE AFTER SETTING THE THEMER */
@@ -54,17 +89,14 @@ a:active {
   color: var(--light-blue);
 }
 
-
-
 body {
   font-family: var(--main-font);
-    font-size: 15pt;
-
+  font-size: 15pt;
+  color: var(--color)
 }
 
 h2 {
   margin: 20px 0;
-  
 }
 
 h3 {
@@ -72,7 +104,6 @@ h3 {
   margin-top: -20px;
   text-align: right;
 }
-
 
 h4 {
   font-family: var(--alt-font);
@@ -84,21 +115,19 @@ h5 {
   font-size: 0.65em;
   font-weight: 400;
 }
-p{
+p {
   font-family: var(--alt-font);
   font-size: 0.67em;
   font-weight: 400;
 }
 img {
   background: url("./story-ph.png");
-
 }
 
 /* ------ Navbar stuff are in navbar.css ----*/
 
-
 #menu {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -127,7 +156,7 @@ img {
 
 main {
   position: relative;
-  
+
   /*So the elements in index.html have infinite space */
   min-height: 500px;
   max-width: 100vw;
@@ -139,17 +168,17 @@ main {
   overflow-x: hidden;
 }
 
-
 section.cover {
   overflow: hidden;
 }
 /* The Menu Background */
-main::before, main::after {
+main::before,
+main::after {
   pointer-events: none;
 }
 
 main::before {
-  content: '';
+  content: "";
   position: absolute;
   background: var(--grey);
   top: 100px;
@@ -159,11 +188,11 @@ main::before {
   transition: 0.5s;
   opacity: 0.9;
   /*box-shadow: 0 0 20px 2px var(--grey);*/
-  z-index: 0;
+  z-index: -10;
 }
 
 main::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 60%;
   right: 0;
@@ -171,7 +200,7 @@ main::after {
   height: 120px;
   background: var(--grey2);
   transition: 0.5s;
-  z-index: 0;
+  z-index: -10;
   opacity: 0.3;
 }
 
@@ -195,7 +224,6 @@ main.active::after {
   z-index: 4;
   background: var(--bg);
   opacity: 1;
-  
 }
 
 main * {
@@ -203,19 +231,17 @@ main * {
   transition-duration: 0.5s;
 }
 main.active {
- min-height: 81vh;
- overflow: hidden
+  min-height: 81vh;
+  overflow: hidden;
 }
-main.active+#menu{
+main.active + #menu {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
 }
 
-main.active .sect{
+main.active .sect {
   transform: scale(0);
-}
-main.active~footer {
 }
 
 #menu-btn {
@@ -229,16 +255,14 @@ main.active~footer {
   z-index: 10;
   transition: 0.9s all;
   transition-delay: 0.2s;
-  transform: translateY(-100%)
+  transform: translateY(-100%);
 }
-#menu-btn.active~.nav-links {
+#menu-btn.active ~ .nav-links {
   opacity: 0.1;
 }
 header.active {
   position: static;
 }
-
-
 
 .intro {
   position: relative;
@@ -255,19 +279,18 @@ header.active {
   min-width: 150px;
   max-width: 300px;
   margin-bottom: 20px;
-display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .intro .card {
   margin-top: 80px;
   width: 100%;
-display: flex;
+  display: flex;
   flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+  justify-content: center;
+  align-items: center;
 }
 
 .intro .top img {
@@ -289,7 +312,6 @@ display: flex;
   text-overflow: ellipsis;
 }
 
-
 .sect {
   position: relative;
   height: 40vh;
@@ -297,7 +319,6 @@ display: flex;
   z-index: 2;
   margin-bottom: 50px;
 }
-
 
 .sect::before {
   content: attr(data-sect-name);
@@ -318,8 +339,6 @@ display: flex;
   scroll-snap-type: x mandatory;
 }
 
-
-
 .stories .story {
   display: inline-block;
   text-align: center;
@@ -332,11 +351,10 @@ display: flex;
   display: inline-block;
   width: 100%;
   overflow: hidden;
-  transition: 2s
+  transition: 2s;
 }
 
 .story .card img {
-  
   min-width: 100px;
   min-height: 160px;
   margin-right: 10px;
@@ -344,13 +362,11 @@ display: flex;
 }
 
 .title {
- 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 .title h4 {
   width: 100%;
@@ -378,7 +394,7 @@ display: flex;
   justify-content: space-between;
 }
 
-#bintro #book  .bottom {
+#bintro #book .bottom {
   padding-left: 0;
 }
 
@@ -389,19 +405,16 @@ display: flex;
   align-items: flex-start;
 }
 
-
 /* END*/
-
 
 footer {
   height: 11vh;
   min-height: 70px;
-  background: var(--grey);
+  background: var(--bg);
   width: 100vw;
   z-index: 99;
   max-width: 100%;
   overflow: hidden;
-  
 }
 #foot-links {
   display: flex;
@@ -414,9 +427,58 @@ footer p {
   text-align: center;
 }
 
+.foot-link::before {
+  font-size: 18px;
+  fill: var(--color);
+  stroke: var(--color);
+}
+
+.navi {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  text-align: center;
+}
+
+.navi label {
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.3);
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.navi label span {
+  position: absolute;
+  top: 0;
+  border-bottom: 2px solid var(--light-blue);
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+}
+.navi label:nth-child(4) span {
+  transform: translateX(-100%);
+}
+.navi label:nth-child(2) span {
+  transform: translateX(100%);
+}
+
+.navi input {
+  display: none;
+}
+
+.navi input:checked + label {
+  background: rgba(170, 170, 170, 0.1);
+}
+
+.navi input:checked + label span {
+  transform: translateX(0);
+}
+
 /* For Tablets 700px width */
 
 @media screen and (min-width: 740px) {
-
-
 }

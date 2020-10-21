@@ -1,0 +1,32 @@
+main {
+  padding: 0;
+}
+
+main form {
+  padding: 0 30px;
+  margin: 10px auto 0;
+  border: 1px solid red;
+  width: 90vw;
+}
+
+form #account-sect label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin: 20px 10px;
+}
+
+img {
+  width: 100px;
+}
+
+input#profile-pic {
+  width: 100%;
+  display: none;
+}
+
+.input-holder {
+  margin: 10px 0 10px;
+}
