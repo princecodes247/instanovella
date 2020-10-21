@@ -1,87 +1,93 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./navbar.css" />
     <link rel="stylesheet" href="./form.css" type="text/css" media="all" />
 
-    
     <link rel="stylesheet" href="./search.css" type="text/css" media="all" />
-</head>
+  </head>
 
-<body class="light">
-
-   <header>
-    <div id="nav-logo-and-links">
-      <h4>Instanovella</h4>
-      <div class="nav-top-links">
-        <a href="./search.html">
-          <div class="nav-links" id="search-btn"></div>
-        </a>
-        <a href="./user.html">
-          <div class="nav-links" id="user-btn"></div>
-        </a>
+  <body class="light">
+    <header>
+      <div id="nav-logo-and-links">
+        <div class="logo"></div>
+        <div class="nav-top-links">
+          <a href="./search.html">
+            <div class="nav-links" id="search-btn"></div>
+          </a>
+          <a href="./profile.html">
+            <div class="nav-links" id="user-btn"></div>
+          </a>
+        </div>
       </div>
-    </div>
-    <nav>
-      <a href="./index.html">
-        <div class="nav-links" id="home-btn"></div>
-      </a>
-      <a href=".allbooks.html">
-        <div class="nav-links" id="books-btn"></div>
-      </a>
-      <a href=".notification.html">
-        <div class="nav-links" id="bell-btn"></div>
-      </a>
+      <nav>
+        <a href="./index.html">
+          <div class="nav-links" id="home-btn"></div>
+        </a>
+        <a href="./allbooks.html">
+          <div class="nav-links" id="books-btn"></div>
+        </a>
+        <a href="./notifications.html">
+          <div class="nav-links" id="bell-btn"></div>
+        </a>
         <div class="nav-links" id="menu-btn"></div>
-      
-    </nav>
-  </header>
-  <main>
-  <form id="search-form" action="" method="get" accept-charset="utf-8">
-      <input type="search" name="search" id="search" placeholder="Search..."  value="" />
-      <input type="submit" style="background-color: transparent ;" class="btn form-btn" name="search-form-btn" id="search-form-btn" value="" />
-  </form>
-   <section id="results">
-     <div id="search-options">
-       
-    
-             <input type="radio" name="search-option" id="stories">
-        <label id="stories-label" for="stories">Stories</label>
-      
-    <input type="radio" name="search-option" id="people">
-           <label id="people-label" for="people">People</label>
-     </div>
-     <div id="result-list">
-       <p>No results</p>
-     </div>
-   </section>
-  <h2>Browse Categories</h2>
-  <section>
-    <div class="cat-item">Art</div>
-    <div class="cat-item">Action</div>
-    <div class="cat-item">Adventure</div>
-    <div class="cat-item">Fanfiction</div>
-    <div class="cat-item">Fantasy</div>
-    <div class="cat-item">Horror</div>
-    <div class="cat-item">Humour</div>
-    <div class="cat-item">Mystery</div>
-    <div class="cat-item">New Adult</div>
-    <div class="cat-item">Non-fiction</div>
-  </section>
-</main>
-  <ul id="menu">
-    <li><a href="">Home</a></li>
-    <li><a href="">All Books</a></li>
-    <li><a href="">Settings</a></li>
-    <li><a href="">About</a></li>
-    <li><a href="">Suuu</a></li>
-  </ul>
-<script src="main.js" type="text/javascript" charset="utf-8"></script>
-</body>
+      </nav>
+    </header>
+    <main>
+      <form id="search-form" action="" method="get" accept-charset="utf-8">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search..."
+          value=""
+        />
+        <input
+          type="submit"
+          style="background-color: transparent"
+          class="btn form-btn"
+          name="search-form-btn"
+          id="search-form-btn"
+          value=""
+        />
+      </form>
+      <section id="results">
+        <div id="search-options">
+          <input type="radio" name="search-option" id="stories" checked />
+          <label id="stories-label" for="stories">Stories</label>
 
+          <input type="radio" name="search-option" id="people" />
+          <label id="people-label" for="people">People</label>
+        </div>
+        <div id="result-list">
+          <p>No results</p>
+        </div>
+      </section>
+      <h2>Browse Categories</h2>
+      <section>
+        <div class="cat-item">Art</div>
+        <div class="cat-item">Action</div>
+        <div class="cat-item">Adventure</div>
+        <div class="cat-item">Fanfiction</div>
+        <div class="cat-item">Fantasy</div>
+        <div class="cat-item">Horror</div>
+        <div class="cat-item">Humour</div>
+        <div class="cat-item">Mystery</div>
+        <div class="cat-item">New Adult</div>
+        <div class="cat-item">Non-fiction</div>
+      </section>
+    </main>
+    <ul id="menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">All Books</a></li>
+      <li><a href="">Settings</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Suuu</a></li>
+    </ul>
+    <script src="main.js" type="text/javascript" charset="utf-8"></script>
+  </body>
 </html>

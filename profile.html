@@ -16,12 +16,12 @@
   <body class="light">
     <header>
       <div id="nav-logo-and-links">
-        <h4>Instanovella</h4>
+        <div class="logo"></div>
         <div class="nav-top-links">
           <a href="./search.html">
             <div class="nav-links" id="search-btn"></div>
           </a>
-          <a href="./user.html">
+          <a href="./profile.html">
             <div class="nav-links" id="user-btn"></div>
           </a>
         </div>
@@ -30,200 +30,254 @@
         <a href="./index.html">
           <div class="nav-links" id="home-btn"></div>
         </a>
-        <a href=".allbooks.html">
+        <a href="./allbooks.html">
           <div class="nav-links" id="books-btn"></div>
         </a>
-        <a href=".notification.html">
+        <a href="./notifications.html">
           <div class="nav-links" id="bell-btn"></div>
         </a>
         <div class="nav-links" id="menu-btn"></div>
       </nav>
     </header>
-    <section class="user-info">
-      <nav id="user-settings">
-        <p>settings</p>
-        <div class="menu-btn">M</div>
-      </nav>
-      <div id="user-details">
-        <div style="overflow: hidden" class="user-pic">
-          <img src="./user_icon.png" alt="1" />
-        </div>
+    <main>
+      <section class="user-info">
+        <nav id="user-settings">
+          <p></p>
 
-        <h3>NAme</h3>
-        <h5>@prince</h5>
-      </div>
-      <div class="user-stats">
-        <span>
-          <p>0</p>
-          <p>Works</p>
-        </span>
-        <span>
-          <p>1</p>
-          <p>Reading list</p>
-        </span>
-        <span>
-          <p>0</p>
-          <p>Followers</p>
-        </span>
-      </div>
-      <input class="btn" type="button" value="Follow" />
-    </section>
-    <section id="about-sect">
-      <nav>
-        <div><p>About</p></div>
-        <div><p>Messages</p></div>
-      </nav>
-      <article id="about">
-        <div class="desc close">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-            tempore quasi nisi nulla odit distinctio obcaecati qui provident quo
-            eaque iste, iusto placeat odio a voluptatibus nihil maxime hic
-            consequatur! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Rem nam adipisci facere cumque unde ratione! Consectetur ad
-            recusandae cupiditate, facere voluptates perferendis assumenda
-            asperiores quisquam, nemo quam maiores, odit aspernatur.
-          </p>
-        </div>
-
-        <input class="btn" type="button" value="Show More" />
-      </article>
-      <article id="messages-cont">
-        ddd
-
-        <form class="send-message-cont">
-          <div class="user-pic">
+          <a class="menu-btn" href="./settings.html"><div></div></a>
+        </nav>
+        <div id="user-details">
+          <div style="overflow: hidden" class="user-pic">
             <img src="./user_icon.png" alt="1" />
           </div>
-          <textarea
-            name="send-message"
-            class="input"
-            id="send-message"
-            cols="10"
-            rows="5"
-          >
-Send a message</textarea
-          >
-        </form>
-        <div class="messages">
-          <span class="message">
-            <div class="message-header">
-              <div class="user-pic">
-                <img src="./user_icon.png" alt="1" />
-              </div>
-              <div class="message-header-details">
-                <h3>Prince Dart</h3>
-                <h5>a day ago</h5>
-              </div>
-            </div>
 
-            <div class="message-text">
-              <p>lol</p>
-            </div>
+          <h3>NAme</h3>
+          <h5>@prince</h5>
+        </div>
+        <div class="user-stats">
+          <span>
+            <p>0</p>
+            <p>Works</p>
           </span>
-
-          <span class="message">
-            <div class="message-header">
-              <div class="user-pic">
-                <img src="./user_icon.png" alt="1" />
-              </div>
-              <div class="message-header-details">
-                <h3>Prince Dart</h3>
-                <h5>a day ago</h5>
-              </div>
-            </div>
-
-            <div class="message-text">
-              <p>lol</p>
-            </div>
+          <span>
+            <p>1</p>
+            <p>Reading list</p>
           </span>
-          <span class="message">
-            <div class="message-header">
-              <div class="user-pic">
-                <img src="./user_icon.png" alt="1" />
-              </div>
-              <div class="message-header-details">
-                <h3>Prince Dart</h3>
-                <h5>a day ago</h5>
-              </div>
-              <div class="message-options">M</div>
-            </div>
-
-            <div class="message-text close">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-                tempore quasi nisi nulla odit distinctio obcaecati qui provident
-                quo eaque iste, iusto placeat odio a voluptatibus nihil maxime
-                hic consequatur! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Rem nam adipisci facere cumque unde ratione!
-                Consectetur ad recusandae cupiditate, facere voluptates
-                perferendis assumenda asperiores quisquam, nemo quam maiores,
-                odit aspernatur.
-              </p>
-            </div>
-            <div class="replies">
-              <div class="reply">
-                <div class="reply-header">
-                  <div class="user-pic">
-                    <img src="./user_icon.png" alt="1" />
-                  </div>
-                </div>
-                <div class="reply-text">
-                  <div class="top">
-                    <div class="reply-name">
-                      <h3>Prince Dart</h3>
-                    </div>
-                    <div class="message-options">M</div>
-                  </div>
-                  <p>
-                    loLorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Libero tempore quasi nisi nulla odit distinctio obcaecati
-                    qui provident quo eaque iste, iusto placeat odio a
-                    voluptatibus nihil maxime hic consequatur! Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Rem l
-                  </p>
-                  <span class="reply-details">
-                    <h5>a day ago |</h5>
-                    <h5><a href="#">reply</a></h5>
-                  </span>
-                </div>
-              </div>
-              <div class="reply"></div>
-              <div class="reply"></div>
-            </div>
-            <form class="send-message-cont none">
-              <div class="user-pic">
-                <img src="./user_icon.png" alt="1" />
-              </div>
-              <textarea
-                name="send-message"
-                class="input"
-                id="send-message"
-                cols="10"
-                rows="5"
-              >
-    Send a message</textarea
-              >
-            </form>
-          </span>
-          <span class="message">
-            <div class="message-header">
-              <div class="user-pic">
-                <img src="./user_icon.png" alt="1" />
-              </div>
-              <div class="message-header-details">
-                <h3>Prince Dart</h3>
-                <h5>a day ago</h5>
-              </div>
-            </div>
-
-            <div class="message-text">
-              <p>lol</p>
-            </div>
+          <span>
+            <p>0</p>
+            <p>Followers</p>
           </span>
         </div>
-      </article>
-    </section>
-    <section id="reading-list">reading Lists</section>
+        <input class="btn" type="button" value="Follow" />
+      </section>
+      <section id="about-sect">
+        <nav class="navi">
+          <input type="radio" name="about-nav" id="about-btn" checked />
+          <label for="about-btn"
+            ><p>About</p>
+            <span></span>
+          </label>
+
+          <input type="radio" name="about-nav" id="messages-btn" />
+          <label for="messages-btn"
+            ><p>Messages</p>
+            <span></span>
+          </label>
+        </nav>
+        <article id="about">
+          <div class="desc close">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+              tempore quasi nisi nulla odit distinctio obcaecati qui provident
+              quo eaque iste, iusto placeat odio a voluptatibus nihil maxime hic
+              consequatur! Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Rem nam adipisci facere cumque unde ratione! Consectetur ad
+              recusandae cupiditate, facere voluptates perferendis assumenda
+              asperiores quisquam, nemo quam maiores, odit aspernatur.
+            </p>
+          </div>
+
+          <input class="btn alt-btn" type="button" value="Show More" />
+
+          <div class="stories-by">
+            <h2>Stories By</h2>
+            <h5>3 published stories</h5>
+            <span class="story">
+              <span class="card">
+                <img src="test.jpg" alt="test" />
+                <div class="title">
+                  <h4>Test if I'm isnnv see hi uh DC d bb</h4>
+                  <h5>Comedy</h5>
+                </div>
+              </span>
+            </span>
+            <span class="story">
+              <span class="card">
+                <img src="test.jpg" alt="test" />
+                <div class="title">
+                  <h4>Test if I'm isnnv see hi uh DC d bb</h4>
+                  <h5>Comedy</h5>
+                </div>
+              </span>
+            </span>
+            <span class="story">
+              <span class="card">
+                <img src="test.jpg" alt="test" />
+                <div class="title">
+                  <h4>Test if I'm isnnv see hi uh DC d bb</h4>
+                  <h5>Comedy</h5>
+                </div>
+              </span>
+            </span>
+          </div>
+          <div class="following"></div>
+          <div class="share"></div>
+          <div class="last-message"></div>
+          <div class="reading-list"></div>
+        </article>
+        <article id="messages-cont">
+          ddd
+
+          <form class="send-message-cont">
+            <div class="user-pic">
+              <img src="./user_icon.png" alt="1" />
+            </div>
+            <textarea
+              name="send-message"
+              class="input send-message"
+              cols="10"
+              rows="10"
+              placeholder="Send a message"
+            ></textarea>
+          </form>
+          <div class="messages">
+            <span class="message">
+              <div class="message-header">
+                <div class="user-pic">
+                  <img src="./user_icon.png" alt="1" />
+                </div>
+                <div class="message-header-details">
+                  <h3>Prince Dart</h3>
+                  <h5>a day ago</h5>
+                </div>
+              </div>
+
+              <div class="message-text">
+                <p>lol</p>
+              </div>
+            </span>
+
+            <span class="message">
+              <div class="message-header">
+                <div class="user-pic">
+                  <img src="./user_icon.png" alt="1" />
+                </div>
+                <div class="message-header-details">
+                  <h3>Prince Dart</h3>
+                  <h5>a day ago</h5>
+                </div>
+              </div>
+
+              <div class="message-text">
+                <p>lol</p>
+              </div>
+            </span>
+            <span class="message">
+              <div class="message-header">
+                <div class="user-pic">
+                  <img src="./user_icon.png" alt="1" />
+                </div>
+                <div class="message-header-details">
+                  <h3>Prince Dart</h3>
+                  <h5>a day ago</h5>
+                </div>
+
+                <div class="message-options"></div>
+              </div>
+
+              <div class="message-text close">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Libero tempore quasi nisi nulla odit distinctio obcaecati qui
+                  provident quo eaque iste, iusto placeat odio a voluptatibus
+                  nihil maxime hic consequatur! Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Rem nam adipisci facere cumque
+                  unde ratione! Consectetur ad recusandae cupiditate, facere
+                  voluptates perferendis assumenda asperiores quisquam, nemo
+                  quam maiores, odit aspernatur.
+                </p>
+              </div>
+              <div class="replies">
+                <div class="reply">
+                  <div class="reply-header">
+                    <div class="user-pic">
+                      <img src="./user_icon.png" alt="1" />
+                    </div>
+                  </div>
+                  <div class="reply-text">
+                    <div class="top">
+                      <div class="reply-name">
+                        <h3>Prince Dart</h3>
+                      </div>
+                      <div class="message-options">M</div>
+                    </div>
+                    <p>
+                      loLorem ipsum dolor sit, amet consectetur adipisicing
+                      elit. Libero tempore quasi nisi nulla odit distinctio
+                      obcaecati qui provident quo eaque iste, iusto placeat odio
+                      a voluptatibus nihil maxime hic consequatur! Lorem ipsum
+                      dolor sit amet consectetur adipisicing elit. Rem l
+                    </p>
+                    <span class="reply-details">
+                      <h5>a day ago |</h5>
+                      <h5><a href="#">reply</a></h5>
+                    </span>
+                  </div>
+                </div>
+                <div class="reply"></div>
+                <div class="reply"></div>
+              </div>
+              <form class="send-message-cont none">
+                <div class="user-pic">
+                  <img src="./user_icon.png" alt="1" />
+                </div>
+                <textarea
+                  name="send-message"
+                  class="input send-message"
+                  cols="10"
+                  rows="5"
+                >
+    Send a message</textarea
+                >
+              </form>
+            </span>
+            <span class="message">
+              <div class="message-header">
+                <div class="user-pic">
+                  <img src="./user_icon.png" alt="1" />
+                </div>
+                <div class="message-header-details">
+                  <h3>Prince Dart</h3>
+                  <h5>a day ago</h5>
+                </div>
+              </div>
+
+              <div class="message-text">
+                <p>lol</p>
+              </div>
+            </span>
+          </div>
+        </article>
+      </section>
+    </main>
+    <ul id="menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">All Books</a></li>
+      <li><a href="">Settings</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Suuu</a></li>
+    </ul>
+    <script src="main.js"></script>
+    <script src="textarea.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

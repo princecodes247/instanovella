@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
     <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./form.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./button.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="navbar.css">
-</head>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="createbook.css" type="text/css" media="all" />
+  </head>
 
-<body>
-  <header>
-    <div id="nav-logo-and-links">
-      <h4>Instanovella</h4>
-      <div class="nav-top-links">
-        <a href="./search.html">
-          <div class="nav-links" id="search-btn"></div>
-        </a>
-        <a href="./user.html">
-          <div class="nav-links" id="user-btn"></div>
-        </a>
+  <body>
+    <header>
+      <div id="nav-logo-and-links">
+        <div class="logo"></div>
+        <div class="nav-top-links">
+          <a href="./search.html">
+            <div class="nav-links" id="search-btn"></div>
+          </a>
+          <a href="./profile.html">
+            <div class="nav-links" id="user-btn"></div>
+          </a>
+        </div>
       </div>
-    </div>
-    <nav>
-      <a href="./index.html">
-        <div class="nav-links" id="home-btn"></div>
-      </a>
-      <a href=".allbooks.html">
-        <div class="nav-links" id="books-btn"></div>
-      </a>
-      <a href=".notification.html">
-        <div class="nav-links" id="bell-btn"></div>
-      </a>
+      <nav>
+        <a href="./index.html">
+          <div class="nav-links" id="home-btn"></div>
+        </a>
+        <a href="./allbooks.html">
+          <div class="nav-links" id="books-btn"></div>
+        </a>
+        <a href="./notifications.html">
+          <div class="nav-links" id="bell-btn"></div>
+        </a>
         <div class="nav-links" id="menu-btn"></div>
-    </nav>
-  </header>
-  <main class="light">
-    <section class="intro" style="margin-top: 8vh">
-  
-  <h1>Create</h1>
-  <form id="create-form" action="" method="get" accept-charset="utf-8">
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" required>
-    
-    <label for="desc">Description</label>
-    <input type="text" name="desc" id="desc" required>
-    
-    
-    <label for="category">Category</label>
-    <input type="text" name="category" id="category" required>
-    <!--  <label for="bcover">Book Cover</label>
+      </nav>
+    </header>
+    <main class="light">
+      <section class="intro" style="margin-top: 8vh">
+        <h1>Create</h1>
+        <form id="create-form" action="" method="get" accept-charset="utf-8">
+          <label for="bcover">Book Cover</label>
+          <label class="file">
+            <input type="file" id="file" aria-label="File browser example" />
+            <span class="file-custom"></span>
+          </label>
+          <label for="title">Story Title</label>
+          <input type="text" name="title" id="title" required />
+
+          <label for="desc">Story Description</label>
+          <input type="text" name="desc" id="desc" required />
+
+          <label for="category">Story Genre</label>
+          <input type="text" name="genre" id="genre" required />
+
+          <textarea
+            class="form"
+            name="tags"
+            id="tags"
+            cols="30"
+            rows="10"
+          ></textarea>
+
+          <select name="copyright" id="copyright"></select>
+          <select name="advanced" id="advanced">
+            <option value=""></option>
+            opt+
+          </select>
+
+          <!--  <label for="bcover">Book Cover</label>
 <label class="file">
         <input type="file" id="file" aria-label="File browser example">
         <span class="file-custom"></span>
       </label>-->
-    <input class="btn form-btn" type="submit" name="create" id="create" value="Create" accept="image/*" />
-  </form>
-      
-    </section>
-  </main>
-  <ul id="menu">
-    <li><a href="">Home</a></li>
-    <li><a href="">All Books</a></li>
-    <li><a href="">Settings</a></li>
-    <li><a href="">About</a></li>
-    <li><a href="">Suuu</a></li>
-  </ul>
-  <script src="main.js"></script>
-  <script src="./createbook.js" type="text/javascript" charset="utf-8"></script>
-</body>
-
+          <input
+            class="btn form-btn"
+            type="submit"
+            name="create"
+            id="create"
+            value="Create"
+          />
+        </form>
+      </section>
+    </main>
+    <ul id="menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">All Books</a></li>
+      <li><a href="">Settings</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Suuu</a></li>
+    </ul>
+    <script src="main.js"></script>
+    <script
+      src="./createbook.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script src="textrea.js" type="text/javascript" charset="utf-8"></script>
+  </body>
 </html>
