@@ -18,6 +18,10 @@
   color: var(--color);
 }
 
+#search:hover {
+  background-color: var(--sub-color);
+}
+
 #search-form-btn {
   right: 0;
   width: 20%;

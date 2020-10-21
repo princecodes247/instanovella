@@ -26,6 +26,7 @@
   --pale-blue: hsl(243, 100%, 93%);
   --grayish-blue: hsl(229, 7%, 55%);
   --ds-blue: hsl(228, 28%, 20%);
+  --ds-blue2: hsl(228, 34%, 66%);
   --dark-blue: hsl(232, 19%, 16%);
   --very-dark-blue: hsl(230, 17%, 14%);
   --dark-bue: #2364aa;
@@ -50,7 +51,7 @@
   );
   --grad2: linear-gradient(135deg, #3c8ce7 10%, #00eaff 100%);
   --grad3: linear-gradient( 135deg, #F5CBFF 10%, #C346C2 100%);
-  --grad4: linear-gradient( 135deg, #FEC163 10%, #DE4313 100%);*/
+  --grad4: linear-gradient( 135deg, #FEC163 10%, #DE4313 100%);
 
 }
 
@@ -59,9 +60,14 @@
   --nav-color: var(--dark-blue);
   --color: var(--white);
   --sub-color: var(--ds-blue);
+    --sub-color2: var(--ds-blue2);
   --p-color: var(--light-blue);
   --theme-color: var(--gold-yellow);
   --alt-theme-color: var(--ds-blue);
+  --menu-bg1: var(--);
+    --menu-bg2: var(--);
+    --input-bg: var(--sub-color);
+    --input-bg2: background: rgba(172, 172, 204, 0.7);
 }
 hhh{
   --bg: var(--white);
@@ -69,6 +75,10 @@ hhh{
   --p-color: var(--light-blue);
   --theme-color: var(--gold-yellow);
   --alt-theme-color: var(--grey3);
+    --menu-bg1: var(--);
+    --menu-bg2: var(--);
+    --input-bg: background: rgba(172, 172, 204, 0.3);
+    --input-bg2: background: rgba(172, 172, 204, 0.7);
 }
 
 .dark {
@@ -77,16 +87,16 @@ hhh{
 
 /* REMOVE AFTER SETTING THE THEMER */
 a:link {
-  color: black;
+  color: var(--color);
 }
 a:visited {
-  color: grey;
+  color: var(--alt-color);
 }
 a:hover {
   color: lightblue;
 }
 a:active {
-  color: var(--light-blue);
+  color: var(--theme-color);
 }
 
 body {
@@ -198,7 +208,7 @@ main::after {
   right: 0;
   width: 80px;
   height: 120px;
-  background: var(--grey2);
+  background: var(--alt-color);
   transition: 0.5s;
   z-index: -10;
   opacity: 0.3;
